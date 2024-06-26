@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Fiscon</title>
+  </head>
+  <body>
+    <header>
+      <h1>Teste equipe Fiscon</h1>
+    </header>
+    <section>
+      <article>
+        <h2>Questão 8</h2>
+        <h3>
+          Dado um vetor que guarda o valor de faturamento diário de uma
+          distribuidora de todos os dias de um ano, faça um programa, que
+          calcule e retorne:
+        </h3>
+        <ul>
+          <li>- O menor valor de faturamento ocorrido em um dia do ano</li>
+          <li>- O maior valor de faturamento ocorrido em um dia do ano</li>
+          <li>
+            - Número de dias no ano em que o valor de faturamento diário foi
+            superior à média anual
+          </li>
+        </ul>
+        <h3>IMPORTANTE</h3>
+
+        <ul>
+          <li>
+            - Considerar o vetor já carregado com as informações de valor de
+            faturamento.
+          </li>
+          <li>
+            - Podem existir dias sem faturamento, como nos finais de semana e
+            feriados, estes dias devem ser ignorados no cálculo da média.
+          </li>
+          <li>- Utilize o algoritmo mais veloz que puder definir.</li>
+        </ul>
+        <div>
+          <h3>Resposta</h3>
+          <p id="resposta"></p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2>Questão 16</h2>
+        <p>
+          Uma empresa solicitou a você um aplicativo para manutenção de um
+          cadastro de clientes. Após a reunião de definição dos requisitos, as
+          conclusões foram as seguintes:
+        </p>
+        <ul>
+          <li>Um cliente pode ter um número ilimitado de telefones;</li>
+          <li>
+            Cada telefone de cliente tem um tipo, por exemplo: comercial,
+            residencial, celular, etc. O sistema deve permitir cadastrar novos
+            tipos de telefone;
+          </li>
+          <li>
+            A princípio, é necessário saber apenas em qual estado brasileiro
+            cada cliente se encontra. O sistema deve permitir cadastrar novos
+            estados;
+          </li>
+        </ul>
+        <p>
+          Você ficou responsável pela parte da estrutura de banco de dados que
+          será usada pelo aplicativo. Assim sendo:
+        </p>
+        <ol>
+          <li>
+            Proponha um modelo lógico para o banco de dados que vai atender a
+            aplicação. Desenhe as tabelas necessárias, os campos de cada uma e
+            marque com setas os relacionamentos existentes entre as tabelas;
+          </li>
+          <li>
+            Aponte os campos que são chave primária utilizando a sigla ‘PK’ e
+            ‘FK’ para chave estrangeira;
+          </li>
+          <li>
+            Faça uma busca utilizando comando SQL que traga o ‘código’, ‘razão
+            social’, ‘e-mail’ e o(s) ‘telefone(s)’ de todos os clientes do
+            estado de São Paulo (código “SP”);
+          </li>
+        </ol>
+        <div>
+          <h3>Resposta</h3>
+          <img
+            src="./bancoDados/Untitled Diagram.drawio.png"
+            alt="respostaTabela"
+          />
+          <h4>Comando SQL:</h4>
+          <p>
+            SELECT c.cliente_id, c.razao_social, c.email, t.numero_telefone FROM
+            Clientes c JOIN Telefones t ON c.cliente_id = t.cliente_id JOIN
+            Estados e ON c.estado_id = e.estado_id WHERE e.nome_estado =
+            'Espírito Santo';
+          </p>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <script src="./index.js"></script>
+    </footer>
+  </body>
+</html>
